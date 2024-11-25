@@ -1,0 +1,232 @@
+body{
+    margin: 0;
+    font-family: Roboto; 
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  .wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  h1{
+    margin: 40px auto;
+    color: #1572ff;
+    text-align: center;
+  }
+  ul{
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+  }
+  li{
+    padding: 6px 10px;
+    border-bottom: 1px solid #eee;
+    border-bottom-left-radius: 40%;
+    margin: 10px auto;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  li h4{
+    color: #008cff;
+    margin: 0;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  li p{
+    color: #333;
+    margin: 8px 0 0;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.1s ease, border-color 0.3s ease;
+  }
+  footer{
+    background: #eee;
+    padding: 30px;
+    margin-top: 60px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+  }
+  footer a{
+    text-align: center;
+    display: block;
+    color: #999;
+    margin-top: 0px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  form{
+    max-width: 960px;
+    height: 120px;
+    margin: 0 auto;
+    text-align: center;
+    padding-right: 80px;
+  }
+  label{
+    display: block;
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #333;
+    margin: 16px 0 6px;
+  }
+  input, select{
+    width: 200px; /* Or set a fixed width like 300px */
+    margin: 5px;
+    padding: 6px;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.1s ease, border-color 0.3s ease;
+  }
+  .field{
+    display: inline-block;
+    margin-bottom: 10px; /* Spacing between fields */
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+  .button {
+    border-radius: 7px;
+    background-color: #3385ff;
+    border: 0;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 7px;
+    min-width: 90px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.6s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.6s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  /* Error message and animation */
+  .error {
+    outline: 2px solid red;
+    background-color: #ffe6e6;
+    animation: shake 0.2s ease-in-out;
+  }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-3px); }
+  }
+  .error-message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: red;
+    font-size: 0.8em;
+    height: 1em;
+    width: 100%;
+    line-height: 1em;
+  }
+  /* Scrolling infinite list */
+  .outer {
+    height: 250px;
+    border: 1px solid #868686;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    height: 1em;
+    flex-shrink: 0;
+    text-align: center;
+    background: #eee;
+  }
+  
+  .middle {
+    border: 1px solid #ffffff;
+    background-color: #cacaca; ;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .middle ul {
+    flex: 1 0 auto;
+    
+  }
+  
+  /* All of dark mode toggles and options */
+  body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+  }
+
+  body.dark-mode input,
+  body.dark-mode select {
+    background-color: #555555;
+    color: #f1f1f1;
+    border: 1px solid #777777;
+  }
+
+  body.dark-mode .error {
+      background-color: #662222;
+      border: 2px solid #cc4444;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  body.dark-mode form {
+    background-color: #333333;
+    color: #f1f1f1;
+    transition: background-color 3s ease, color 0.3s ease, border-color 0.9s ease;
+  }
+  body.dark-mode label {
+  color: #f1f1f1;  /* Light text for labels */
+  }
+  body.dark-mode footer{
+  background-color: #333333;  /* Dark background for form */
+  color: #f1f1f1;
+  border: 1px solid #555555;
+  }
+  body.dark-mode button {
+  background-color: #003c97;
+  }
+
+  body.dark-mode footer a{
+    background-color: #333333;  /* Dark background for form */
+    color: #d3d3d3;
+  }
+
+  body.dark-mode .middle{
+    background-color: #818181;
+    border: #e2e2e2;
+  }
+
+  body.dark-mode li{
+    border-bottom: 1px solid #554646;
+  }
+
+  body.dark-mode li h4{
+    color: #45f9ff;
+  }
+
+  body.dark-mode li p{
+    color: #dddddd;
+  }

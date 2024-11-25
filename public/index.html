@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finanse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1>Finance Logger</h1>
+    <button id="dark-mode-toggle" class="button">
+    <span id="toggle-icon">☀️</span>
+  </div>
+  
+  <footer>
+    <form class="new-item-form">
+      <div class="field">
+        <label>Type:</label>
+        <select id="type">
+          <option value="invoice">Invoice</option>
+          <option value="payment">Payment</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>To / From:</label>
+        <input type="text" onfocus="this.value=''" id="tofrom">
+        <span class="error-message"></span>
+      </div>   
+      <div class="field">
+        <label>Details:</label>
+        <input type="text" onfocus="this.value=''" id="details">
+        <span class="error-message"></span>
+      </div>
+      <div class="field">
+        <label>Amount ($):</label>
+        <input type="number" onfocus="this.value=''" id="amount">
+        <span class="error-message"></span>
+      </div>
+      <button class="button"><span>Send </span></button>
+    </form>
+    <a class="header">Transactions<a>
+  </footer>
+  <section id="analytics">
+    <!-- <h2>Analytics</h2>
+    <div class="stats">
+      <p>Total Income: <span id="total-income">0</span></p>
+      <p>Total Expenses: <span id="total-expenses">0</span></p>
+      <p>Net Balance: <span id="net-balance">0</span></p> -->
+        <div class='outer'>
+          <div class='middle'>
+            <ul class="item-list"></ul>
+          </div>
+            <!-- <div class='footer'> -->
+          <!-- <button>Footer</button> -->
+        </div>
+      </div>
+    </div>
+    <!-- <canvas id="category-chart" width="400" height="200"></canvas> -->
+  </section>
+
+      <!-- <div id="transaction-cards" class="transaction-cards-container">
+      Transactions will be rendered as cards here -->
+      <!-- </div> -->
+  <script type = "module" src='app.js'></script>
+</body>
+</html>
